@@ -1,0 +1,14 @@
+{% extends 'tradetracker/layout.html.twig' %}
+{% block title %}Test!{% endblock %}
+	{% block body %}
+      {% if persons|length == 0%}
+     <h1> No Person Records Found </h2>
+     {% endif %}
+     <h1>Person Records in Database:</h1></br>
+     <table ; cellspacing="0"; width: 700px; padding: 0; margin: 2;>
+     <thead><tr><th scope="col">FirstName </th><th scope="col">LastName</th><th scope="col">Age</th></tr></thead <tbody>
+     {% for person in persons %}
+      <tr><td>{{ person.firstName }}</td><td> {{ person.lastName }}</td><td>{{ person.personAge }}</td></tr>
+     {% endfor %}</tbody>
+     </table>
+     {% endblock %}

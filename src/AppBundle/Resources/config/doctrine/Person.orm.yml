@@ -1,0 +1,20 @@
+AppBundle\Entity\Person:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PersonRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: 255
+        lastName:
+            type: string
+            length: 255
+        personAge:
+            type: integer
+    lifecycleCallbacks: {  }

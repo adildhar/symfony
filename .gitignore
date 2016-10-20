@@ -1,0 +1,6 @@
+.vagrant
+vagrant_ansible_inventory_default
+vendor
+app/cache
+app/config/para
+app/src/Tests

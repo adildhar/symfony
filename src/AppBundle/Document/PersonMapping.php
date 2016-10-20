@@ -1,0 +1,106 @@
+<?php
+namespace AppBundle\Document;
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+use AppBundle\Entity\Person;
+
+/**
+ * @MongoDB\Document(repositoryClass="AppBundle\Repository\PersonMappingRepository")
+**/
+class PersonMapping
+{
+    /**
+     * @MongoDB\Id
+     */
+    private $id;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    private $firstName;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    private $lastName;
+
+    /**
+     * @MongoDB\Field(type="integer")
+     */
+    private $personAge;
+
+    /**
+     * Get id
+     *
+     * @return id $id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set firstName
+     *
+     * @param string $firstName
+     * @return $this
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+        return $this;
+    }
+
+    /**
+     * Get firstName
+     *
+     * @return string $firstName
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * Set lastName
+     *
+     * @param string $lastName
+     * @return $this
+     */
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+        return $this;
+    }
+
+    /**
+     * Get lastName
+     *
+     * @return string $lastName
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * Set personAge
+     *
+     * @param integer $personAge
+     * @return $this
+     */
+    public function setPersonAge($personAge)
+    {
+        $this->personAge = $personAge;
+        return $this;
+    }
+
+    /**
+     * Get personAge
+     *
+     * @return integer $personAge
+     */
+    public function getPersonAge()
+    {
+        return $this->personAge;
+    }
+}

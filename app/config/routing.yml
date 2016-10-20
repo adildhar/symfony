@@ -1,0 +1,28 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+#_home:
+#  resource: "@AppBundle/Controller/MainController.php"
+#  type: annotation
+#  prefix: /home
+
+_index:
+  path: /index
+  defaults: { _controller: AppBundle:Main:index }
+
+_setup:
+  path: /setup
+  defaults: { _controller: AppBundle:Setup:number }  
+
+_test:
+  path: /test
+  defaults: { _controller: AppBundle:Test:generate } 
+
+_transfer:
+  path: /transfer
+  defaults: { _controller: AppBundle:Transfer:move } 
+
+_count:
+  path: /count
+  defaults: { _controller: AppBundle:Count:count } 

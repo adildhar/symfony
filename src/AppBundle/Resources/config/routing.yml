@@ -1,0 +1,16 @@
+
+index.:
+    path:     /index.
+    defaults: { _controller: AppBundle:Main:index. }
+
+index:
+    path:     /index
+    defaults: { _controller: AppBundle:Main:index }
+
+move:
+    path:     /move
+    defaults: { _controller: AppBundle:Transfer:move }
+
+count:
+    path:     /count
+    defaults: { _controller: AppBundle:CountController:count }
