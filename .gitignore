@@ -2,5 +2,8 @@
 vagrant_ansible_inventory_default
 vendor
 app/cache
+.parameters.yml
+src/Tests
+.zip
+.log
 app/config/parameters.yml
-app/src/Tests
