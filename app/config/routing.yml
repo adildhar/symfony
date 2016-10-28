@@ -31,3 +31,7 @@ _takedown:
   path: /takedown
   defaults: { _controller: AppBundle:Takedown:take }
 
+_teardown:
+ path: /teardown
+ defaults: { _controller: AppBundle:Teardown:tear }
+
