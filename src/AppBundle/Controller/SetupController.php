@@ -17,7 +17,7 @@ class SetupController extends Controller
     public function setupAction()
     {
     $response = new StreamedResponse();
-    $process = new Process('/home/ubuntu/elb-remove');
+    $process = new Process('/home/ubuntu/elb-addinstances');
     $response->setCallback(function() use ($process) {
         $process->run(function ($type, $buffer) {
             if (Process::ERR === $type) {
