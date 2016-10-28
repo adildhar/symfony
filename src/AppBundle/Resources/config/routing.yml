@@ -14,3 +14,7 @@ move:
 count:
     path:     /count
     defaults: { _controller: AppBundle:CountController:count }
+
+take:
+    path:     /takedown
+    defaults: { _controller: AppBundle:Takedown:take }

@@ -1,4 +1,5 @@
 <?php
+
 namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -9,15 +10,16 @@ use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
 
-class SetupController extends Controller
+
+class TakedownController extends Controller
 {
     /**
-     * @Route("/setup")
+     * @Route("/takedown")
      */
-    public function setupAction()
+    public function takeAction()
     {
     $response = new StreamedResponse();
-    $process = new Process('/home/ubuntu/elb-remove');
+    $process = new Process('ping -c 5 localhost');
     $response->setCallback(function() use ($process) {
         $process->run(function ($type, $buffer) {
             if (Process::ERR === $type) {
@@ -31,5 +33,5 @@ class SetupController extends Controller
     });
         $response->setStatusCode(200);
         return $response;
-    }
-}   
+    }    
+}
